@@ -1,0 +1,102 @@
+/* Extra styles for cart & checkout functionality */
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #ffbe33;
+  color: #222;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+}
+
+.cart_link {
+  position: relative;
+}
+
+/* E-wallet selection cards */
+.ewallet-card {
+  display: block;
+  cursor: pointer;
+  margin: 0;
+}
+
+.ewallet-card input {
+  display: none;
+}
+
+.ewallet-box {
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  padding: 14px 10px;
+  text-align: center;
+  transition: all 0.2s;
+  background: #fff;
+}
+
+.ewallet-box strong {
+  display: block;
+  font-size: 15px;
+}
+
+.ewallet-box small {
+  color: #6c757d;
+  font-size: 11px;
+}
+
+.ewallet-card input:checked + .ewallet-box {
+  border-color: #ffbe33;
+  background: #fff8e6;
+  box-shadow: 0 0 0 1px #ffbe33;
+}
+
+.ewallet-card:hover .ewallet-box {
+  border-color: #ffbe33;
+}
+
+/* Product modal image */
+#productModalImg {
+  background: #f8f9fa;
+  padding: 10px;
+}
+
+/* Cart table */
+#cartModalBody table img {
+  background: #f8f9fa;
+}
+
+/* Receipt print styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #receiptContent, #receiptContent * {
+    visibility: visible;
+  }
+  #receiptContent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .modal-footer, .modal-header, #closeReceiptBtn, button {
+    display: none !important;
+  }
+}
+
+/* Make food boxes feel clickable */
+.food_section .box,
+.filters-content .box {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.food_section .box:hover,
+.filters-content .box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
